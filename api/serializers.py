@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from .models import Icons
+from .models import Icons, Category
 
 
 class IconsSerializer(ModelSerializer):
@@ -17,11 +17,11 @@ class CreateIconsSerializer(ModelSerializer):
 
 class CreateCategorySerializer(ModelSerializer):
     class Meta:
-        model = Icons
+        model = Category
         exclude = ('id',)
         
 
 class CategorySerializer(ModelSerializer):
     class Meta:
-        model = Icons
+        model = Category
         fields = '__all__'
