@@ -8,4 +8,5 @@ urlpatterns = [
     path('icons/', PagesIconsAPIView.as_view()),
     path('create_icons/', CreateIconsAPIView.as_view()),
     path('create_category/', CreateCategoryAPIView.as_view()),
+    path('all_categories/', CategoryIconsAPIView.as_view()),
 ]
