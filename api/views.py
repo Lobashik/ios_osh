@@ -1,7 +1,7 @@
 from rest_framework.generics import ListAPIView, CreateAPIView
 from rest_framework.pagination import PageNumberPagination
 
-from .models import Icons
+from .models import Icons, Category
 from .serializers import *
 # два метода: один все высерает, другой постранично по 10 штук
 # категории иконок
@@ -32,3 +32,12 @@ class CreateIconsAPIView(CreateAPIView):
     queryset = Icons.objects.all()
     serializer_class = IconsSerializer
 
+
+class CategoryIconsAPIView(ListAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+
+class CreateCategoryAPIView(CreateAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CreateCategorySerializer

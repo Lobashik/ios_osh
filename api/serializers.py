@@ -13,3 +13,15 @@ class CreateIconsSerializer(ModelSerializer):
     class Meta:
         model = Icons
         exclude = ('id',)
+        
+
+class CreateCategorySerializer(ModelSerializer):
+    class Meta:
+        model = Icons
+        exclude = ('id',)
+        
+
+class CategorySerializer(ModelSerializer):
+    class Meta:
+        model = Icons
+        fields = '__all__'
