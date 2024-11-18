@@ -1,4 +1,4 @@
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import ListAPIView, CreateAPIView
 from rest_framework.pagination import PageNumberPagination
 
 from .models import Icons
@@ -26,3 +26,9 @@ class PagesIconsAPIView(ListAPIView):
     queryset = Icons.objects.all().order_by('pk')
     serializer_class = IconsSerializer
     pagination_class = IconsPaginations
+    
+
+class CreateIconsAPIView(CreateAPIView):
+    queryset = Icons.objects.all()
+    serializer_class = IconsSerializer
+
