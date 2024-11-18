@@ -31,6 +31,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+DOMAIN_NAME = 'https://autmn-ios.ru/'
+CSRF_COOKIE_SECURE = True  # Если работаете с HTTPS
+CSRF_TRUSTED_ORIGINS = ['https://autmn-ios.ru/']
 
 
 # Application definition
